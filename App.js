@@ -1,12 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Header from "./components/Header.js";
+import StartGameScreen from "./screens/StartGameScreen.js";
 
 export default function App() {
+  //let gameDisplay = <StartGameScreen/>;
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={styles.screen}>
+      <Header title="Guess a Number" />
+      <StartGameScreen />
     </View>
   );
 }
